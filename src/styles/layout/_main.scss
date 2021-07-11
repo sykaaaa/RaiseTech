@@ -1,0 +1,275 @@
+.main{
+  width: 100%;
+}
+
+.mainvisual{
+  width: 100%;
+  max-width: 100%;
+  height: 650px;
+  position: relative;
+  top: 70px;
+}
+
+//======= ヘッダートップレイヤー =======//
+.layer{
+  &-top{
+    width: 100%;
+    height: 650px;
+    position: absolute;
+    z-index: 300;
+    background: url(../img/bg-hero1.png) no-repeat center center;
+  }
+  &-middle{
+    width: 100%;
+    height: 650px;
+    position: absolute;
+    z-index: 200;
+    background: url(../img/bg-hero2.png) no-repeat center center;
+  }
+  &-bottom{
+   width: 100%;
+   height: 650px;
+   position: fixed;
+   z-index: 100;
+   background: url(../img/bg-hero3.png) no-repeat center center;
+  }
+}
+
+.main-bg-black{
+  width: 100%;
+  height: 230px;
+  padding: 50px 0;
+  position: absolute;
+  top: 720px;
+  z-index: 400;
+  background-color: #000;
+}
+
+//ヘッダートップレイヤー　レスポンシブ//
+
+@media (max-width: 1200px){
+  .layer{
+    &-top, &-middle{
+      top: -20px;
+    }
+    &-bottom{
+      top: 50px;
+    }
+  }
+  .main-bg-black{
+    top: 700px;
+    height: 250px;
+  }
+}
+
+
+@media (max-width: 767px){
+  .layer{
+    &-top, &-middle{
+      height: 320px;
+      max-width: 100%;
+      background-size: cover;
+      background-position: top;
+      top: -50px;
+    }
+
+    &-bottom{
+      height: 320px;
+      max-width: 100%;
+      background-size: cover;
+      top: -50px;
+    }
+  }
+  .main-bg-black{
+    padding: 64px 0;
+    top: 360px;
+    height: 1250px;
+  }
+}
+
+@media (max-width: 650px) {
+  .main-bg-black{
+    height: 1300px;
+  }
+  
+  
+}
+
+
+//=====レイズテックの紹介（画面中央・白い四角箇所）=====//
+
+.school-overview-box{
+  height: 327px;
+  width: 418px;
+  border-radius: 5%;
+  background-color: #fff;
+  position: absolute;
+  z-index: 800;
+  top: 150px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.overview-content{
+  padding: 40px 10px 5px 10px;
+  margin: 0 auto;
+
+  & img{
+    display: block;
+    width: 280px;
+    height: 58.75px;
+    margin: 0 auto;
+  }
+
+  & p{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 16px;
+    line-height: 1.7;
+    padding: 20px 0;
+  }
+}
+
+.button{
+    width: 290px;
+    height: 68px;
+    background-color: #2498b3;
+    margin: 10px auto 0 auto;
+    border-radius: 4px;
+
+    & a{
+      color: #fff;
+      font-size: 17px;
+      font-weight: bolder;
+      text-align: center;
+      line-height: 68px;
+    }
+  }
+
+// ---レイズテック紹介　レスポンシブ---//
+
+  @media (max-width: 767px) {
+    .school-overview-box{
+      width: 100%;
+      height: 156px;
+      border-radius: 0%;
+      top:210px;
+      padding: 9px 0 13px;
+    }
+
+    .overview-content{
+      padding: 0;
+
+      & img{
+      display: none;
+      }
+
+      & p{
+        height: 66px;
+        margin: 6.5px 0;
+        padding: 0;
+        font-size: 1.3rem;
+      }
+    }
+    .button{
+      width: 228px;
+      height: 42px;
+      border-radius: 5px;
+
+      & a{
+        line-height: 42px;
+        font-size: 15px;
+        text-align: center;
+      }
+    }
+  }
+
+// ===== appeal point =====//
+
+.appealpoint{
+  width: 100%;
+  max-width: 100%;
+  height: 200px;
+  position: relative;
+  z-index: 500;
+  top: -130px;
+
+  &-container{
+    width: 1078px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center; 
+  }
+
+  &-item{
+    margin: 0 50px;
+  }
+
+//  紹介文  //
+
+  &-text{
+    color: #fff;
+    text-align: center;
+  }
+
+  &-text dt{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    padding: 10px 0;
+  }
+  
+  &-text dd{
+    font-size: 1.5rem;
+    font-weight: bolder;
+  }
+}
+
+// 紹介文のアイコン//
+
+.circle{
+  width: 230px;
+  max-width: 100%;
+  height: 230px;
+  background-color: #fff;
+  border: 5px solid black;
+  border-radius: 50%;
+  margin: 0 auto;
+
+  i{
+   display: block;
+   display: flex;
+   justify-content: center;
+   line-height: 230px;
+  }
+}
+// アイコンサイズ//
+.size{
+    font-size: 10rem;
+  }
+
+// ---アピールポイント　レスポンシブ---//
+
+  @media  (max-width:1078px) {
+    .appealpoint-item{
+      margin: 0 3%;
+    }
+  }
+
+  @media (max-width: 767px) {
+   .appealpoint{
+     top: -200px;
+     
+      &-container{
+        display: block;
+      }
+
+      &-item{
+        padding-bottom: 60px;
+      }
+    }
+   dd br{
+     display: none;
+   }
+  }
